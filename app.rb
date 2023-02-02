@@ -12,7 +12,12 @@ class Application
     # initialise et boucler (while) tant que la partie n'est pas terminée (true/false)
 
     def perform
-
+      Game.new.go
+      while @board.victory? == false
+        self.turn
+      end
     end
 
 end
+
+puts "end of file"
